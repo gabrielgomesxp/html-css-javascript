@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" id="txtn1">
+    <input type="number" id="txtn2">
+    <input type="button" value="Somar" id="btnSomar"> 
+    <div id="resultado">Resultado</div>
+
+    <script>
+        // --- CAPÍTULO 1: RECONHECIMENTO ---
+        // Primeiro, apresentamos todos os elementos do nosso HTML para o JavaScript
+        const inputN1 = document.getElementById('txtn1');
+        const inputN2 = document.getElementById('txtn2');
+        const botaoSomar = document.getElementById('btnSomar');
+        const divResultado = document.getElementById('resultado');
+
+        // --- CAPÍTULO 2: A ESCUTA ---
+        // Adicionamos o "ouvinte de evento" no botão de somar
+        botaoSomar.addEventListener('click', somar);
+
+        // --- CAPÍTULO 3: A AÇÃO ---
+        // A função que será executada quando o evento de clique acontecer
+        function somar() {
+            // Pegamos os valores e convertemos para número DENTRO da função
+            const n1 = Number(inputN1.value);
+            const n2 = Number(inputN2.value);
+            const soma = n1 + n2;
+
+            // Exibimos o resultado
+            divResultado.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>.`;
+        }
+    </script>
+</body>
+</html>
