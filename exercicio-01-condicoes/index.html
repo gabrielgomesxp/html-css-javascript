@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    Velocidade do carro 
+    <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="verificar" id="btn">
+    <div id="resposta">Velocidade Atual</div>
+    <script>
+        var velocidade = window.document.querySelector('input#txtvel')
+        var buttonVerificar = window.document.querySelector('input#btn')
+        var res = window.document.querySelector('div#resposta')
+
+       buttonVerificar.addEventListener('click', avaliar) 
+
+       function avaliar() {
+        var vel = Number(velocidade.value)
+        res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h<strong></p>`
+            if (vel > 30) {
+                res.innerHTML += `<p>Você ta rapido demais! <strong>MULTADO!</strong></p>`
+            }
+       }           
+    </script>
+</body>
+</html>
