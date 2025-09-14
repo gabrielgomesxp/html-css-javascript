@@ -1,0 +1,10 @@
+var c = 1
+while (c <= 10) {
+    console.log(`Essa é a ${c}ª vez que estamos passando por aqui`)
+ c++
+}
+
+// Estrutura de repetição com variável de controle
+for (c = 1;c <= 10;c++) {
+    console.log(`Essa é a ${c}ª que estamos passando nessa variavel de controle`)
+}
