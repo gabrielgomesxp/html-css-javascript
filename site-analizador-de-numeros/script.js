@@ -28,7 +28,11 @@ function adicionarNumero() {
 }
 
 function finalizar() {
-    lista.innerHTML=""
+    if (listaDeNumeros.length == 0) {
+        window.alert('Adicione valores antes de finalizar!')
+    } else {
+
+    }
 }
 
 
