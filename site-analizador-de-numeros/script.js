@@ -12,6 +12,7 @@ function adicionarNumero() {
     n = Number(num.value)
     if (n > 100 || n < 1 || listaDeNumeros.includes(n)) {
         window.alert('Valor inválido ou já encontrado na lista.')
+        num.innerText =""
     } else {
         listaDeNumeros.push(n)
         let item = document.createElement('option')
@@ -20,6 +21,9 @@ function adicionarNumero() {
         lista.appendChild(item)
     }
 
+    // limpa o input e coloca o foco de volta
+    num.value = ""
+    num.focus()
 
 }
 
