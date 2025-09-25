@@ -10,9 +10,14 @@ function renderizarTarefas() {
     for (let i = 0; i < listaDeTarefas.length; i++) {
         let item = document.createElement('li');
         item.textContent = listaDeTarefas[i];
+
+        let botaoRemover = document.createElement('button');
+        botaoRemover.textContent = "remover";
+        item.appendChild(botaoRemover); // coloca o botao dentro da lista
         blocoLista.appendChild(item);
     }
 }
+
 
 function adicionar() {
     let txtValue = textoImput.value.trim();
