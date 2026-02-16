@@ -20,14 +20,14 @@ function renderizarTarefas() {
 
 
 function adicionar() {
-    let txtValue = textoImput.value.trim();
+    let txtValue = textoImput.value.trim(); // obter o texto digitado em um campo de entrada (input) e remover todos os espaços em branco extras do início e do final da string. 
     if (txtValue === "") {
         window.alert('Favor preencher o espaço');
     } else {
 
-    listaDeTarefas.push(txtValue);
-    renderizarTarefas();
-    textoImput.value = "";
-    textoImput.focus();
+    listaDeTarefas.push(txtValue); // jogando tudo oque o usuario escrevendo dentro da lista
+    renderizarTarefas(); // chama a função para criar a lista
+    textoImput.value = ""; // limpa para poder fazer outro preenchimento
+    textoImput.focus(); // coloca o  cursor para fazer novo preenchimento
     }
 }
